@@ -1,7 +1,4 @@
-import { cn } from "@/utils/cn";
-import clsx from "clsx";
-import React from "react";
-
+import { cn } from "../../lib/utils";
 export const Meteors = ({
   number,
   className,
@@ -14,6 +11,7 @@ export const Meteors = ({
     <>
       {meteors.map((el, idx) => (
         <span
+          id={el}
           key={"meteor" + idx}
           className={cn(
             "animate-meteor-effect absolute top-1/2 left-1/2 h-0.5 w-0.5 rounded-[9999px] bg-slate-500 shadow-[0_0_0_1px_#ffffff10] rotate-[215deg]",

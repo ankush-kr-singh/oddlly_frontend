@@ -1,4 +1,4 @@
-import { GlareCard } from "@/components/ui/glare-card";
+import { GlareCard } from "../ui/glare-card";
 
 const ServiceCard = ({
   heading,

@@ -1,9 +1,9 @@
-import Navbar from "@/Navbar";
-import Hero from "@/pages/Home/Hero";
-import Services from "@/pages/Home/Services";
-import Advantage from "@/pages/Home/Advantage";
-import Contacts from "@/pages/Home/Contacts";
-import Footer from "@/pages/Home/Footer";
+import Navbar from "../../Navbar";
+import Advantage from "./Advantage";
+import Contacts from "./Contacts";
+import Footer from "./Footer";
+import Hero from "./Hero";
+import Services from "./Services";
 
 const HomePage = () => {
   return (

@@ -1,4 +1,4 @@
-import SpinButton from "@/components/ui/Buttons/spin-button";
+import SpinButton from "../../components/ui/Buttons/spin-button";
 
 const Hero = () => {
   return (

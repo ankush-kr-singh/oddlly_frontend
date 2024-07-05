@@ -1,5 +1,5 @@
-import { cn } from "@/utils/cn";
 import { useRef } from "react";
+import { cn } from "../../lib/utils";
 
 export const GlareCard = ({
   children,
