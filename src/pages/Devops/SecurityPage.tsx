@@ -1,19 +1,19 @@
+import Hero from "./Hero";
 import ProductDetailsCard from "./ProductDetailsCard";
 import Sectons from "./Sectons";
-import { DevopsHero, DevopsProductDetails } from "./data";
-import Hero from "./Hero";
-const DevOpsPage = () => {
+import { SecurityHero, SecurityProductDetails } from "./data";
+const SecurityPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <Hero {...DevopsHero} />
+      <Hero {...SecurityHero} />
       {/* Product Details */}
       <Sectons
-        title="Devops Products"
+        title="Security Products"
         className={`flex flex-col gap-10 `}
         titleStyle={`text-center text-3xl underline pb-6 text-gray-600`}
       >
-        {DevopsProductDetails.map((product, index) => (
+        {SecurityProductDetails.map((product, index) => (
           <ProductDetailsCard {...product} key={index} />
         ))}
       </Sectons>
@@ -21,4 +21,4 @@ const DevOpsPage = () => {
   );
 };
 
-export default DevOpsPage;
+export default SecurityPage;

@@ -12,4 +12,9 @@ type SectionProps = {
   titleStyle?: string;
   children?: React.ReactNode;
 };
-export type { ProductDetailsCardProps, SectionProps };
+
+type HeroProps = {
+  title: string;
+  desc: string;
+};
+export type { ProductDetailsCardProps, SectionProps, HeroProps };

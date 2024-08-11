@@ -1,5 +1,8 @@
 import Navbar from "./Navbar";
+import AutomationPage from "./pages/Devops/AutomationPage";
 import DevOpsPage from "./pages/Devops/DevOpsPage";
+import SecurityPage from "./pages/Devops/SecurityPage";
+import SoftwarePage from "./pages/Devops/SoftwarePage";
 import Advantage from "./pages/Home/Advantage";
 import Contacts from "./pages/Home/Contacts";
 import Footer from "./pages/Home/Footer";
@@ -14,9 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/devops" element={<DevOpsPage />} />
-          {/* <Route path="/security" element={<Security />} /> */}
-          {/* <Route path="/software" element={<Software />} /> */}
-          {/* <Route path="/automation" element={<Automation />} /> */}
+          <Route path="/security" element={<SecurityPage />} />
+          <Route path="/software" element={<SoftwarePage />} />
+          <Route path="/automation" element={<AutomationPage />} />
         </Routes>
         <Advantage />
         <Contacts />

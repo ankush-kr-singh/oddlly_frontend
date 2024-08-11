@@ -1,19 +1,19 @@
 import ProductDetailsCard from "./ProductDetailsCard";
 import Sectons from "./Sectons";
-import { DevopsHero, DevopsProductDetails } from "./data";
+import { AutomationHero, AutomationProductDetails } from "./data";
 import Hero from "./Hero";
-const DevOpsPage = () => {
+const AutomationPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <Hero {...DevopsHero} />
+      <Hero {...AutomationHero} />
       {/* Product Details */}
       <Sectons
-        title="Devops Products"
+        title="Automation Products"
         className={`flex flex-col gap-10 `}
         titleStyle={`text-center text-3xl underline pb-6 text-gray-600`}
       >
-        {DevopsProductDetails.map((product, index) => (
+        {AutomationProductDetails.map((product, index) => (
           <ProductDetailsCard {...product} key={index} />
         ))}
       </Sectons>
@@ -21,4 +21,4 @@ const DevOpsPage = () => {
   );
 };
 
-export default DevOpsPage;
+export default AutomationPage;
