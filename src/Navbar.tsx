@@ -1,3 +1,12 @@
+import { Link } from "react-router-dom";
+
+const links = [
+  { link: "/", title: "Home" },
+  { link: "/devops", title: "Devops" },
+  { link: "/security", title: "Security" },
+  { link: "/software", title: "Software" },
+  { link: "/automation", title: "Automation" },
+];
 const Navbar = () => {
   return (
     <>
@@ -9,44 +18,30 @@ const Navbar = () => {
         {/* navbar */}
         <nav className=" w-[95%] max-w-maxScreen h-12 flex justify-between mx-auto items-center">
           {/* logo */}
-          <a href="">
-            <div className="font-light text-2xl">
-              &lt; <span className="font-bold text-xl">Oddlly</span> /&gt;
-            </div>
-          </a>
+          <Link to={"/"} className="font-light text-2xl">
+            &lt; <span className="font-bold text-xl">Oddlly</span> /&gt;
+          </Link>
 
           {/* menu */}
           <div
             className="hidden md:flex md:flex-1  h-full items-center gap-5"
             style={{ justifyContent: "flex-end" }}
           >
-            <a
-              href=""
-              className="duration-150 text-center h-full hover:text-[#6674CC] transition-colors flex items-center font-semibold text-indigo-600"
-            >
-              Home
-            </a>
-            <a
-              href=""
-              className="duration-150 text-center h-full hover:text-[#6674CC] transition-colors flex items-center"
-            >
-              Services
-            </a>
-            <a
-              href=""
-              className="duration-150 text-center h-full hover:text-[#6674CC] transition-colors flex items-center"
-            >
-              About
-            </a>
-            <a
-              href=""
-              className="duration-150 text-center h-full hover:text-[#6674CC] transition-colors flex items-center"
-            >
-              Careers
-            </a>
+            {links.map((el, index) => (
+              <Link
+                key={index}
+                to={el.link}
+                className={`duration-150 text-center h-full hover:text-[#6674CC] transition-colors flex items-center ${
+                  window.location.href.split("/").at(-1) ==
+                    el.link.split("/")[1] && "text-indigo-600"
+                }`}
+              >
+                {el.title}
+              </Link>
+            ))}
 
             <a
-              href=""
+              href="#contacts"
               className="duration-150 h-fit py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium text-sm transition-colors"
             >
               Contact Us
