@@ -6,7 +6,7 @@ const data = [
     para: `Transform your IT operations with our automation and networking
                 solutions. We offer end-to-end services, from design to
                 implementation.`,
-    link: `#`,
+    link: `/automation`,
     linkText: `Automation`,
     className: "",
   },
@@ -14,7 +14,7 @@ const data = [
     heading: `DevOps`,
     para: `We streamline your processes through continuous integration,
                 continuous deployment, and infrastructure automation`,
-    link: `#`,
+    link: `/devops`,
     linkText: `DevOps`,
   },
   {
@@ -22,7 +22,7 @@ const data = [
     para: `We offer comprehensive cybersecurity assessments, implementation
                 of security measures, and continuous monitoring to keep your
                 data safe.`,
-    link: `#`,
+    link: `/security`,
     linkText: `Security`,
   },
   {
@@ -30,7 +30,7 @@ const data = [
     para: `From custom software development to application maintenance and
                 support, we have the expertise to handle it all.
               `,
-    link: `#`,
+    link: `/software`,
     linkText: `Software`,
     className: ``,
   },

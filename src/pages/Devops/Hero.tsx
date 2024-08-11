@@ -3,11 +3,14 @@ import { HeroProps } from "./app";
 
 const Hero = ({ desc, title }: HeroProps) => {
   useLayoutEffect(() => {
-    document.title += " | Devops";
+    document.title = `Oddlly | ${title.split(" ")[0]}`;
   }, []);
   return (
     <>
-      <div className="flex flex-col items-center h-[70vh] justify-center">
+      <div
+        id="hero"
+        className="flex flex-col items-center h-[70vh] justify-center"
+      >
         <p className="rounded-3xl text-sm bg-slate-100 w-fit px-4 py-2  drop-shadow-md text-slate-800">
           Oddlly Technology
         </p>

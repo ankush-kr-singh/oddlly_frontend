@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 const links = [
-  { link: "/", title: "Home" },
-  { link: "/devops", title: "Devops" },
-  { link: "/security", title: "Security" },
-  { link: "/software", title: "Software" },
-  { link: "/automation", title: "Automation" },
+  { link: "/#hero", title: "Home" },
+  { link: "/devops#hero", title: "Devops" },
+  { link: "/security#hero", title: "Security" },
+  { link: "/software#hero", title: "Software" },
+  { link: "/automation#hero", title: "Automation" },
 ];
 const Navbar = () => {
   return (

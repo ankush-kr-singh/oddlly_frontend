@@ -4,9 +4,11 @@ import { cn } from "../../lib/utils";
 export const GlareCard = ({
   children,
   className,
+  onClick,
 }: {
   children: React.ReactNode;
   className?: string;
+  onClick?: ({}: any) => any;
 }) => {
   const isPointerInside = useRef(false);
   const refElement = useRef<HTMLDivElement>(null);
@@ -54,7 +56,6 @@ export const GlareCard = ({
 
   const updateStyles = () => {
     if (refElement.current) {
-      console.log(state.current);
       const { background, rotate, glare } = state.current;
       refElement.current?.style.setProperty("--m-x", `${glare.x}%`);
       refElement.current?.style.setProperty("--m-y", `${glare.y}%`);
@@ -66,6 +67,7 @@ export const GlareCard = ({
   };
   return (
     <div
+      onClick={onClick}
       style={containerStyle}
       className={`relative isolate [contain:layout_style] [perspective:600px] transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-transform w-[320px] [aspect-ratio:17/21] ${className} lg:h-[20rem] lg:w-[16rem]`}
       ref={refElement}

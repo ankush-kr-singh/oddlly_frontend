@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { GlareCard } from "../ui/glare-card";
 
 const ServiceCard = ({
@@ -13,16 +14,17 @@ const ServiceCard = ({
   linkText: string;
   className?: string;
 }) => {
+  const navigate = useNavigate();
+  const goto = () => {
+    navigate(link);
+  };
   return (
     <>
-      <GlareCard className={className}>
+      <GlareCard className={className} onClick={goto}>
         <div className=" flex flex-col justify-evenly items-center h-full">
           <h2 className={`text-xl font-medium text-center`}>{heading}</h2>
           <p className="pt-4 px-4 text-gray-700 text-sm">{para}</p>
-          <a
-            href={link}
-            className="duration-150 h-fit py-2 px-4  hover:bg-white/10 text-[#EF476F] rounded-full font-medium transition-colors border-[#EF476F] border flex gap-2"
-          >
+          <div className="duration-150 h-fit py-2 px-4  hover:bg-white/10 text-[#EF476F] rounded-full font-medium transition-colors border-[#EF476F] border flex gap-2">
             {linkText}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +40,7 @@ const ServiceCard = ({
                 d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
               />
             </svg>
-          </a>
+          </div>
         </div>
       </GlareCard>
     </>

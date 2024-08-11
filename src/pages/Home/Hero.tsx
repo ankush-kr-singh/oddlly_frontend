@@ -3,7 +3,10 @@ import SpinButton from "../../components/ui/Buttons/spin-button";
 const Hero = () => {
   return (
     <>
-      <div className="mx-auto w-[95%] max-w-maxScreen  h-screen pt-[4rem] flex flex-col lg:flex-row">
+      <div
+        id="hero"
+        className="mx-auto w-[95%] max-w-maxScreen  h-screen pt-[4rem] flex flex-col lg:flex-row"
+      >
         {/* left */}
         <div className="flex-1 flex flex-col mt-8 gap-4 items-center justify-center">
           <h1 className="text-gray-900 text-center lg:text-left text-3xl sm:text-[2.5rem] font-semibold w-full leading-[1.25]">
