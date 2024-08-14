@@ -1,4 +1,13 @@
+import { Link } from "react-router-dom";
+
 // Footer component
+const links = [
+  { link: "/#hero", title: "Home" },
+  { link: "/devops#hero", title: "Devops" },
+  { link: "/security#hero", title: "Security Services" },
+  { link: "/software#hero", title: "Software Service" },
+  { link: "/automation#hero", title: "IT Automation" },
+];
 const Footer = () => {
   return (
     <footer className="text-black relative min-h-[280px] pb-8 py-8 bg-neutral-9 bg-slate-100">
@@ -23,31 +32,13 @@ const Footer = () => {
           <div className="flex flex-col gap-y-3 text-center text-base md:text-left">
             <p className="font-medium text-center md:text-left">Quick Links</p>
             <div className="flex flex-col gap-y-2">
-              <a href="">
-                <p className="text-sm font-normal text-shark-300 hover:text-indigo-500">
-                  Home
-                </p>
-              </a>
-              <a href="">
-                <p className="text-sm font-normal text-shark-300 hover:text-indigo-500">
-                  Security Services
-                </p>
-              </a>
-              <a href="">
-                <p className="text-sm font-normal text-shark-300 hover:text-indigo-500">
-                  IT Automation
-                </p>
-              </a>
-              <a href="">
-                <p className="text-sm font-normal text-shark-300 hover:text-indigo-500">
-                  DevOps
-                </p>
-              </a>
-              <a href="">
-                <p className="text-sm font-normal text-shark-300 hover:text-indigo-500">
-                  Software Service
-                </p>
-              </a>
+              {links.map((el, index) => (
+                <Link to={el.link} key={index}>
+                  <p className="text-sm font-normal text-shark-300 hover:text-indigo-500">
+                    {el.title}
+                  </p>
+                </Link>
+              ))}
             </div>
           </div>
 

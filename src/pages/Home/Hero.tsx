@@ -1,5 +1,11 @@
+import { Link } from "react-router-dom";
 import SpinButton from "../../components/ui/Buttons/spin-button";
-
+const links = [
+  { link: "/devops#hero", title: "DevOps" },
+  { link: "/security#hero", title: "Security Services" },
+  { link: "/software#hero", title: "Software Development" },
+  { link: "/automation#hero", title: "IT Automation" },
+];
 const Hero = () => {
   return (
     <>
@@ -20,14 +26,14 @@ const Hero = () => {
           {/* buttons */}
           <div className="flex flex-col lg:flex-row gap-8 w-full items-center">
             <a
-              href=""
+              href="#contacts"
               className="duration-150 h-fit py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium transition-colors"
             >
               Contact Us
             </a>
 
             <a
-              href=""
+              href="#services"
               className="duration-150 h-fit py-2 px-4  hover:bg-white/10 text-[#EF476F] rounded-full font-medium transition-colors border-[#EF476F] border flex gap-2"
             >
               View Services
@@ -51,10 +57,11 @@ const Hero = () => {
 
         {/* Right */}
         <div className="flex-1 hidden lg:flex flex-col items-end justify-center gap-8">
-          <SpinButton>IT Automation</SpinButton>
-          <SpinButton>Software Development</SpinButton>
-          <SpinButton>DevOps</SpinButton>
-          <SpinButton>Security Services</SpinButton>
+          {links.map((el, index) => (
+            <Link to={el.link}>
+              <SpinButton>{el.title}</SpinButton>
+            </Link>
+          ))}
         </div>
       </div>
     </>
