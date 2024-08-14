@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+const apiUrl =
+  "https://xkitiqxzgyvsg62xfpyanv7qq40cggzd.lambda-url.ap-south-1.on.aws/";
 export default function Contacts() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -8,9 +9,6 @@ export default function Contacts() {
   const [loading, setLoading] = useState(false);
 
   const sendEmail = async () => {
-    const apiUrl =
-      "https://xkitiqxzgyvsg62xfpyanv7qq40cggzd.lambda-url.ap-south-1.on.aws/";
-
     const data = {
       name,
       text: `
@@ -34,20 +32,26 @@ export default function Contacts() {
     }
   };
   const handleSubmit = async () => {
+    if (!message || !(phone || email)) {
+      window.alert("All fields required!");
+      return;
+    }
     setLoading(true);
 
     try {
       let res = await sendEmail();
-      console.log(res);
-      // if (res.ok) {
-      //   const result = await res.json();
-      //   console.log("Email sent successfully:", result);
-      // } else {
-      //   console.error("Failed to send email:", res.statusText);
-      // }
+      if (res.ok) {
+        const result = await res.json();
+        window.alert("Email sent successfully");
+        console.log(result);
+      } else {
+        window.alert("Failed to send email");
+        console.error(res.statusText);
+      }
     } catch (error) {
-      window.alert("Something went wrond!");
+      window.alert("Something went wrong!");
     } finally {
+      setMessage("");
       setLoading(false);
     }
   };
