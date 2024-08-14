@@ -58,7 +58,7 @@ const Hero = () => {
         {/* Right */}
         <div className="flex-1 hidden lg:flex flex-col items-end justify-center gap-8">
           {links.map((el, index) => (
-            <Link to={el.link}>
+            <Link to={el.link} key={index}>
               <SpinButton>{el.title}</SpinButton>
             </Link>
           ))}
