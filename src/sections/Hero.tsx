@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import SpinButton from "../../components/ui/Buttons/spin-button";
+import SpinButton from "../components/ui/Buttons/spin-button";
 const links = [
   { link: "/devops#hero", title: "DevOps" },
   { link: "/security#hero", title: "Security Services" },

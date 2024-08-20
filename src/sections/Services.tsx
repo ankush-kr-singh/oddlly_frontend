@@ -1,4 +1,4 @@
-import ServiceCard from "../../components/common/ServiceCard";
+import ServiceCard from "../components/common/ServiceCard";
 
 const data = [
   {

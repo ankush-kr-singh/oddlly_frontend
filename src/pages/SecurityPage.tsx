@@ -1,14 +1,12 @@
-import Hero from "./Hero";
-import ProductDetailsCard from "./ProductDetailsCard";
-import Sectons from "./Sectons";
-import { SecurityHero, SecurityProductDetails } from "./data";
+import { SecurityHero, SecurityProductDetails } from "../config/data";
+import { HeroGeneral, ProductDetailsCard, Sections } from "../sections";
 const SecurityPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <Hero {...SecurityHero} />
+      <HeroGeneral {...SecurityHero} />
       {/* Product Details */}
-      <Sectons
+      <Sections
         title="Security Products"
         className={`flex flex-col gap-10 `}
         titleStyle={`text-center text-3xl underline pb-6 text-gray-600`}
@@ -16,7 +14,7 @@ const SecurityPage = () => {
         {SecurityProductDetails.map((product, index) => (
           <ProductDetailsCard {...product} key={index} />
         ))}
-      </Sectons>
+      </Sections>
     </>
   );
 };

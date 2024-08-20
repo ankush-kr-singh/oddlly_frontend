@@ -1,13 +1,12 @@
-import Navbar from "./Navbar";
-import AutomationPage from "./pages/Devops/AutomationPage";
-import DevOpsPage from "./pages/Devops/DevOpsPage";
-import SecurityPage from "./pages/Devops/SecurityPage";
-import SoftwarePage from "./pages/Devops/SoftwarePage";
-import Advantage from "./pages/Home/Advantage";
-import Contacts from "./pages/Home/Contacts";
-import Footer from "./pages/Home/Footer";
-import HomePage from "./pages/Home/HomePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  HomePage,
+  AutomationPage,
+  DevOpsPage,
+  SecurityPage,
+  SoftwarePage,
+} from "./pages";
+import { Advantage, Contacts, Footer, Navbar } from "./sections";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
-import Hero from "./Hero";
-import Services from "./Services";
+import Hero from "../sections/Hero";
+import Services from "../sections/Services";
 
 const HomePage = () => {
   return (

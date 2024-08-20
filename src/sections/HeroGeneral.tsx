@@ -1,7 +1,7 @@
 import { useLayoutEffect } from "react";
-import { HeroProps } from "./app";
+import { HeroProps } from "../config/app";
 
-const Hero = ({ desc, title }: HeroProps) => {
+const HeroGeneral = ({ desc, title }: HeroProps) => {
   useLayoutEffect(() => {
     document.title = `Oddlly | ${title.split(" ")[0]}`;
   }, []);
@@ -21,4 +21,4 @@ const Hero = ({ desc, title }: HeroProps) => {
   );
 };
 
-export default Hero;
+export default HeroGeneral;

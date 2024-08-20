@@ -1,6 +1,6 @@
-import { SectionProps } from "./app";
+import { SectionProps } from "../config/app";
 
-const Sectons = ({ title, className, titleStyle, children }: SectionProps) => {
+const Sections = ({ title, className, titleStyle, children }: SectionProps) => {
   return (
     <div className={` w-[90%] max-w-[1200px] mx-auto ${className}`}>
       {title && <h1 className={`${titleStyle}`}>{title}</h1>}
@@ -9,4 +9,4 @@ const Sectons = ({ title, className, titleStyle, children }: SectionProps) => {
   );
 };
 
-export default Sectons;
+export default Sections;

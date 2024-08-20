@@ -1,14 +1,12 @@
-import ProductDetailsCard from "./ProductDetailsCard";
-import Sectons from "./Sectons";
-import { DevopsHero, DevopsProductDetails } from "./data";
-import Hero from "./Hero";
+import { DevopsHero, DevopsProductDetails } from "../config/data";
+import { ProductDetailsCard, HeroGeneral, Sections } from "../sections";
 const DevOpsPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <Hero {...DevopsHero} />
+      <HeroGeneral {...DevopsHero} />
       {/* Product Details */}
-      <Sectons
+      <Sections
         title="Devops Products"
         className={`flex flex-col gap-10 `}
         titleStyle={`text-center text-3xl underline pb-6 text-gray-600`}
@@ -16,7 +14,7 @@ const DevOpsPage = () => {
         {DevopsProductDetails.map((product, index) => (
           <ProductDetailsCard {...product} key={index} />
         ))}
-      </Sectons>
+      </Sections>
     </>
   );
 };

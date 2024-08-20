@@ -1,4 +1,4 @@
-import { ProductDetailsCardProps } from "./app";
+import { ProductDetailsCardProps } from "../config/app";
 
 const ProductDetailsCard = ({
   bg_img_url,

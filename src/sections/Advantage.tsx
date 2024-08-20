@@ -1,4 +1,4 @@
-import { Meteors } from "../../components/ui/meteors";
+import { Meteors } from "../components/ui/meteors";
 
 const Advantage = () => {
   return (
