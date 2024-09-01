@@ -19,7 +19,16 @@ const Navbar = () => {
         <nav className=" w-[95%] max-w-maxScreen h-12 flex justify-between mx-auto items-center">
           {/* logo */}
           <Link to={"/"} className="font-light text-2xl">
-            &lt; <span className="font-bold text-xl">Oddlly</span> /&gt;
+            <p className="flex items-center gap-2">
+              <img
+                alt="Oddlly Logo"
+                loading="lazy"
+                width="45"
+                height="45"
+                src="/oddlly.svg"
+              />{" "}
+              Oddlly
+            </p>
           </Link>
 
           {/* menu */}

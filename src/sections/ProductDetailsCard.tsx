@@ -7,15 +7,15 @@ const ProductDetailsCard = ({
   title,
   alignment,
 }: ProductDetailsCardProps) => {
-  const flexRow = alignment === "RIGHT" ? "flex-row-reverse" : "";
-  const textEnd = alignment === "RIGHT" ? "text-end" : "";
+  const flexRow = alignment === "RIGHT" ? "md:flex-row-reverse" : "";
+  const textEnd = alignment === "RIGHT" ? "md:text-end" : "";
   return (
     <>
       <div
         className={`drop-shadow-md overflow-hidden  bg-slate-50 rounded-md flex gap-5 ${flexRow} `}
       >
         {/* image */}
-        <div className={`flex-[3] relative drop-shadow-xl`}>
+        <div className={`flex-[3] relative drop-shadow-xl hidden md:block `}>
           <img src={bg_img_url} className="absolute h-full w-full opacity-75" />
           <p className="absolute bg-black/40 h-full w-full text-lg font-semibold text-white drop flex justify-center items-center">
             {img_title}

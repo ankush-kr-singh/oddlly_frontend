@@ -47,7 +47,9 @@ const Footer = () => {
             <p className="font-medium text-center md:text-left">GET IN TOUCH</p>
             <div className="flex items-center gap-3 group">
               <p className="font-medium text-shark-300 group-hover:text-indigo-500">
-                <a href="mailto:support@oddlly.in">support@oddlly.in</a>
+                <a href="mailto:oddly.techno@gmail.com">
+                  oddly.techno@gmail.com
+                </a>
               </p>
             </div>
           </div>

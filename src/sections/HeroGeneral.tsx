@@ -9,12 +9,12 @@ const HeroGeneral = ({ desc, title }: HeroProps) => {
     <>
       <div
         id="hero"
-        className="flex flex-col items-center h-[70vh] justify-center"
+        className="mt-10 flex flex-col items-center h-[70vh] justify-center mx-6"
       >
         <p className="rounded-3xl text-sm bg-slate-100 w-fit px-4 py-2  drop-shadow-md text-slate-800">
           Oddlly Technology
         </p>
-        <h1 className="text-7xl text-gray-700 pt-4">{title}</h1>
+        <h1 className=" text-4xl md:text-7xl text-gray-700 pt-4">{title}</h1>
         <p className="text-xl text-gray-900 pt-3">{desc}</p>
       </div>
     </>
