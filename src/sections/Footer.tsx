@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 // Footer component
 const links = [
-  { link: "/#hero", title: "Home" },
-  { link: "/devops#hero", title: "Devops" },
-  { link: "/security#hero", title: "Security Services" },
-  { link: "/software#hero", title: "Software Service" },
-  { link: "/automation#hero", title: "IT Automation" },
+  { link: "/", title: "Home" },
+  { link: "/devops", title: "Devops" },
+  { link: "/security", title: "Security Services" },
+  { link: "/software", title: "Software Service" },
+  { link: "/automation", title: "IT Automation" },
 ];
 const Footer = () => {
   return (
