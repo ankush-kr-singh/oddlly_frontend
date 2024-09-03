@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import SpinButton from "../components/ui/Buttons/spin-button";
 const links = [
-  { link: "/devops#hero", title: "DevOps" },
-  { link: "/security#hero", title: "Security Services" },
-  { link: "/software#hero", title: "Software Development" },
-  { link: "/automation#hero", title: "IT Automation" },
+  { link: "/devops", title: "DevOps" },
+  { link: "/security", title: "Security Services" },
+  { link: "/software", title: "Software Development" },
+  { link: "/automation", title: "IT Automation" },
 ];
 const Hero = () => {
   return (

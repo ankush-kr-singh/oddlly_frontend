@@ -19,9 +19,8 @@ const Footer = () => {
               <img
                 alt="Oddlly Logo"
                 loading="lazy"
-                width="100"
-                height="100"
-                src="/oddlly.svg"
+                width="150"
+                src="/oddlly_name_s.svg"
               />
             </a>
             <p className="text-sm max-w-[300px] font-normal text-neutral-2">
@@ -47,8 +46,8 @@ const Footer = () => {
             <p className="font-medium text-center md:text-left">GET IN TOUCH</p>
             <div className="flex items-center gap-3 group">
               <p className="font-medium text-shark-300 group-hover:text-indigo-500">
-                <a href="mailto:oddly.techno@gmail.com">
-                  oddly.techno@gmail.com
+                <a href="mailto:oddlly.techno@gmail.com">
+                  oddlly.techno@gmail.com
                 </a>
               </p>
             </div>

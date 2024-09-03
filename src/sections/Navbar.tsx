@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 const links = [
-  { link: "/#hero", title: "Home" },
-  { link: "/devops#hero", title: "Devops" },
-  { link: "/security#hero", title: "Security" },
-  { link: "/software#hero", title: "Software" },
-  { link: "/automation#hero", title: "Automation" },
+  { link: "/", title: "Home" },
+  { link: "/devops", title: "Devops" },
+  { link: "/security", title: "Security" },
+  { link: "/software", title: "Software" },
+  { link: "/automation", title: "Automation" },
 ];
 const Navbar = () => {
   return (
@@ -19,15 +19,19 @@ const Navbar = () => {
         <nav className=" w-[95%] max-w-maxScreen h-12 flex justify-between mx-auto items-center">
           {/* logo */}
           <Link to={"/"} className="font-light text-2xl">
-            <p className="flex items-center gap-2">
+            <p className="flex items-center">
               <img
                 alt="Oddlly Logo"
                 loading="lazy"
-                width="45"
-                height="45"
-                src="/oddlly.svg"
+                width="125"
+                src="/oddlly_name_s.svg"
               />{" "}
-              Oddlly
+              {/* <p
+                style={{ textShadow: "2px 2px  #d1d5db" }}
+                // className="text-gray-300"
+              >
+                ddlly
+              </p> */}
             </p>
           </Link>
 
@@ -40,10 +44,7 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={el.link}
-                className={`duration-150 text-center h-full hover:text-[#6674CC] transition-colors flex items-center ${
-                  window.location.href.split("/").at(-1) ==
-                    el.link.split("/")[1] && "text-indigo-600"
-                }`}
+                className={`duration-150 text-center h-full hover:text-[#6674CC] transition-colors flex items-center `}
               >
                 {el.title}
               </Link>

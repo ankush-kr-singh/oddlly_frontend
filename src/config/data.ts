@@ -96,7 +96,7 @@ export const DevopsProductDetails: ProductDetailsCardProps[] = [
 
 export const SecurityProductDetails: ProductDetailsCardProps[] = [
   {
-    bg_img_url: "cybersecurity_assessments.jpg",
+    bg_img_url: "sec-1.webp",
     img_title: "Cybersecurity Assessments",
     title: "Cybersecurity Assessments and Audits",
     points: [
@@ -118,7 +118,7 @@ export const SecurityProductDetails: ProductDetailsCardProps[] = [
     alignment: "LEFT",
   },
   {
-    bg_img_url: "security_protocols.jpg",
+    bg_img_url: "sec-2.webp",
     img_title: "Security Protocols",
     title: "Implementation of Security Protocols and Measures",
     points: [
@@ -141,7 +141,7 @@ export const SecurityProductDetails: ProductDetailsCardProps[] = [
     alignment: "RIGHT",
   },
   {
-    bg_img_url: "continuous_monitoring.jpg",
+    bg_img_url: "sec-3.png",
     img_title: "Continuous Monitoring",
     title: "Continuous Monitoring and Incident Response",
     points: [
@@ -164,7 +164,7 @@ export const SecurityProductDetails: ProductDetailsCardProps[] = [
     alignment: "LEFT",
   },
   {
-    bg_img_url: "security_training.jpg",
+    bg_img_url: "sec-4.webp",
     img_title: "Security Training",
     title: "Security Training and Awareness",
     points: [
